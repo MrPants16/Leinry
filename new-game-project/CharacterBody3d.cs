@@ -5,12 +5,26 @@ public partial class CharacterBody3d : CharacterBody3D
 {
 	public const float Speed = 5.0f;
 	public const float JumpVelocity = 4.5f;
-	public const float Stamina = 10.0f;
+	public const float max_stamina = 100.0f;
+	public const float current_stamina = 100.0f;
+	public const float stamina_recovery_rate = 1.0f;  // How fast stamina recovers over time
 
+	public override void _Ready()
+	{
+		
+	}
+	
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector3 velocity = Velocity;
-
+		
+		//if (current_stamina < max_stamina)
+			{
+			//float current_stamina = current_stamina + stamina_recovery_rate * Convert.ToSingle(delta);
+			//GD.Print("Stamina: ", current_stamina);
+			//current_stamina = clamp(current_stamina, 0, max_stamina);
+			}
+			
 		// Add the gravity.
 		if (!IsOnFloor())
 		{
@@ -21,6 +35,9 @@ public partial class CharacterBody3d : CharacterBody3D
 		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
 		{
 			velocity.Y = JumpVelocity;
+			//float stamina_cost = 10.0f;
+			//float new_stamina = current_stamina - stamina_cost;
+			//float current_stamina = new_stamina;
 		}
 		
 			

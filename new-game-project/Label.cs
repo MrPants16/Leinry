@@ -8,10 +8,10 @@ public partial class Label : Godot.Label
 	{
 		
 	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	
+	public override void _PhysicsProcess(double delta)
 	{
-		Label.text = ('Durabilitty');
+		string display_stamina = Convert.ToString(CharacterBody3d.current_stamina);
+		Text = ("Stamina: " + display_stamina);
 	}
 }
