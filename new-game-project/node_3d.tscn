@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://ipvj18ua2re5"]
+[gd_scene load_steps=17 format=3 uid="uid://ipvj18ua2re5"]
 
 [ext_resource type="Script" path="res://CharacterBody3d.cs" id="1_cwjuc"]
+[ext_resource type="Script" path="res://Label.cs" id="1_g3wjr"]
 [ext_resource type="Script" path="res://BoxMesh.cs" id="1_qkece"]
 [ext_resource type="Script" path="res://camera_3d.gd" id="3_1okhm"]
 [ext_resource type="ArrayMesh" uid="uid://dj712skcpq1am" path="res://Assets/sprites/Tree 02/Tree.obj" id="3_43tgs"]
@@ -41,6 +42,17 @@ size = Vector3(2.54486, 5.6651, 1)
 
 [node name="Game" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000130177, 2.38419e-07, 0.00759888)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.021
+anchor_bottom = 0.021
+offset_right = 352.68
+offset_bottom = 135.32
+text = "Stamina: "
+script = ExtResource("1_g3wjr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.149535, 0.885641, -0.439636, 0, 0.444635, 0.895712, 0.988756, -0.133941, 0.0664887, 0, 0, 0)

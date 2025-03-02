@@ -5,6 +5,7 @@ public partial class CharacterBody3d : CharacterBody3D
 {
 	public const float Speed = 5.0f;
 	public const float JumpVelocity = 4.5f;
+	public const float Stamina = 10.0f;
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -21,15 +22,27 @@ public partial class CharacterBody3d : CharacterBody3D
 		{
 			velocity.Y = JumpVelocity;
 		}
-
+		
+			
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
 		Vector2 inputDir = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
 		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
 		if (direction != Vector3.Zero)
 		{
-			velocity.X = direction.X * Speed;
-			velocity.Z = direction.Z * Speed;
+			if (Input.IsActionPressed("ui_run"))
+				{
+				float Speed = 8.5f;
+				velocity.X = direction.X * Speed;
+				velocity.Z = direction.Z * Speed;
+				}
+			else
+				{
+				float Speed = 5.0f;
+				velocity.X = direction.X * Speed;
+				velocity.Z = direction.Z * Speed;
+				}
+			
 		}
 		else
 		{
