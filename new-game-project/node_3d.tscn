@@ -1,0 +1,110 @@
+[gd_scene load_steps=15 format=3 uid="uid://ipvj18ua2re5"]
+
+[ext_resource type="Script" path="res://CharacterBody3d.cs" id="1_cwjuc"]
+[ext_resource type="Script" path="res://BoxMesh.cs" id="1_qkece"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="3_1okhm"]
+[ext_resource type="ArrayMesh" uid="uid://dj712skcpq1am" path="res://Assets/sprites/Tree 02/Tree.obj" id="3_43tgs"]
+[ext_resource type="Script" path="res://Tree.cs" id="3_swm17"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlf3b"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_433c2"]
+radius = 0.33
+height = 1.8
+
+[sub_resource type="Skin" id="Skin_f2ru1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oxe5m"]
+radius = 0.33
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ilauf"]
+radius = 0.1
+height = 0.5
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rhyoq"]
+radius = 0.19392
+height = 2.2068
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4tl8c"]
+albedo_color = Color(0.172549, 0.247059, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_f4fmf"]
+material = SubResource("StandardMaterial3D_4tl8c")
+size = Vector2(200, 200)
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_vrg2k"]
+
+[node name="Game" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000130177, 2.38419e-07, 0.00759888)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.149535, 0.885641, -0.439636, 0, 0.444635, 0.895712, 0.988756, -0.133941, 0.0664887, 0, 0, 0)
+light_color = Color(0.928143, 0.974487, 0.897046, 1)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.726587, -29.5613)
+collision_layer = 3
+script = ExtResource("1_cwjuc")
+
+[node name="boxMesh" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.921119, 0)
+rotation_order = 0
+layers = 3
+material_override = SubResource("StandardMaterial3D_qlf3b")
+mesh = SubResource("CapsuleMesh_433c2")
+skin = SubResource("Skin_f2ru1")
+skeleton = NodePath("../..")
+script = ExtResource("1_qkece")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.811951, 0)
+shape = SubResource("CapsuleShape3D_oxe5m")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 3)
+script = ExtResource("3_1okhm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(0.812466, 0.580106, 0.05811, -0.578628, 0.814541, -0.0413852, -0.0713408, -3.13283e-09, 0.997452, -0.377417, 0.973226, 0)
+mesh = SubResource("CapsuleMesh_ilauf")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(0.812466, 0.580106, 0.05811, -0.32121, 0.52858, -0.785765, -0.486543, 0.619742, 0.615789, -0.556967, 0.760055, -0.0926819)
+mesh = SubResource("CapsuleMesh_ilauf")
+
+[node name="Tree" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96627, 0, -31.2818)
+layers = 3
+mesh = ExtResource("3_43tgs")
+script = ExtResource("3_swm17")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tree/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.559669, 0)
+shape = SubResource("CapsuleShape3D_rhyoq")
+
+[node name="floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_f4fmf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
+transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_vrg2k")
+
+[node name="Tree2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.88831, 0, -34.1074)
+layers = 3
+mesh = ExtResource("3_43tgs")
+script = ExtResource("3_swm17")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tree2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.559669, 0)
+shape = SubResource("CapsuleShape3D_rhyoq")
