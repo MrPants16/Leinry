@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://ipvj18ua2re5"]
+[gd_scene load_steps=43 format=3 uid="uid://ipvj18ua2re5"]
 
 [ext_resource type="Script" path="res://CharacterBody3d.cs" id="1_cwjuc"]
 [ext_resource type="Script" path="res://Label.cs" id="1_g3wjr"]
@@ -6,8 +6,10 @@
 [ext_resource type="Script" path="res://camera_3d.gd" id="3_1okhm"]
 [ext_resource type="ArrayMesh" uid="uid://dj712skcpq1am" path="res://Assets/sprites/Tree 02/Tree.obj" id="3_43tgs"]
 [ext_resource type="Script" path="res://Tree.cs" id="3_swm17"]
+[ext_resource type="Texture2D" uid="uid://c7fnsyqjg3id2" path="res://Textures/rock_text_01.png" id="7_0xofh"]
 [ext_resource type="ArrayMesh" uid="uid://xdc8i5apkkd4" path="res://Assets/sprites/mountain/mount.blend1.obj" id="7_57xbo"]
 [ext_resource type="Texture2D" uid="uid://q4nlin565axr" path="res://Textures/ground_grass_3264_4062_Small.jpg" id="8_rwgrs"]
+[ext_resource type="ArrayMesh" uid="uid://b6wafolnuyrdt" path="res://Assets/sprites/grass/Trava Kolosok.obj" id="10_lex7u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l5ewb"]
 sky_top_color = Color(0, 0.472695, 0.998028, 1)
@@ -115,6 +117,18 @@ albedo_texture_force_srgb = true
 albedo_texture = ExtResource("8_rwgrs")
 albedo_texture_force_srgb = true
 uv1_scale = Vector3(5, 5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_af2pi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hir41"]
+albedo_texture = ExtResource("7_0xofh")
+albedo_texture_force_srgb = true
+uv1_scale = Vector3(50, 5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6x4xb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jolec"]
+albedo_texture = ExtResource("8_rwgrs")
 
 [node name="Game" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000130177, 2.38419e-07, 0.00759888)
@@ -718,3 +732,20 @@ transform = Transform3D(-4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, 61.
 mesh = ExtResource("7_57xbo")
 surface_material_override/0 = SubResource("StandardMaterial3D_7rk15")
 surface_material_override/1 = SubResource("StandardMaterial3D_gxocg")
+
+[node name="Road" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Road"]
+transform = Transform3D(50, 0, 0, 0, 0.2, 0, 0, 0, 7, 12.8306, 0, 2.52592)
+mesh = SubResource("BoxMesh_af2pi")
+surface_material_override/0 = SubResource("StandardMaterial3D_hir41")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Road/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Road/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_6x4xb")
+
+[node name="grass" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, -2.65043)
+mesh = ExtResource("10_lex7u")
+surface_material_override/0 = SubResource("StandardMaterial3D_jolec")
