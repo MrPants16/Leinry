@@ -1,0 +1,23 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1740971440
+Camera3d.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+CameraControllerNode.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+camera_3d.gd::GDScript::-1::1740971246::0::1::::<>Camera3D<>::
+CharacterBody3d.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+CollisionShape3d.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+icon.svg::CompressedTexture2D::8555685319356438333::1740971246::1740971441::1::::<><>::
+Label.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+node_3d.tscn::PackedScene::593768961903834498::1740971246::0::1::::<><>::res://CharacterBody3d.cs<>res://Label.cs<>res://CameraControllerNode.cs<>res://camera_3d.gd<>uid://dj712skcpq1am::::res://Assets/sprites/Tree 02/Tree.obj<>res://Tree.cs
+README.md::TextFile::-1::1740971209::0::1::::<><>::
+StaticBody3d.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+sun_light.gd::GDScript::-1::1740971246::0::1::::<>DirectionalLight3D<>::
+Tree.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+::res://Assets/::1740971246
+::res://Assets/sprites/::1740971246
+::res://Assets/sprites/Tree 02/::1740971246
+bark_0004.jpg::CompressedTexture2D::4126384903690256686::1740971246::1740971441::1::::<><>::
+DB2X2_L01.png::CompressedTexture2D::752650455037081354::1740971246::1740971441::1::::<><>::
+DB2X2_L02.png::CompressedTexture2D::8197303518422428903::1740971246::1740971441::1::::<><>::
+DB2X2_L02_NRM.png::CompressedTexture2D::3469969863014851305::1740971246::1740971442::1::::<><>::
+Render.jpeg::CompressedTexture2D::4266337875620359008::1740971246::1740971441::1::::<><>::
+Tree.obj::Mesh::7858649551178789284::1740971246::1740971442::1::::<><>::uid://by137rx65jjfy::::res://Assets/sprites/Tree 02/bark_0004.jpg<>uid://kyubp0jxb27g::::res://Assets/sprites/Tree 02/DB2X2_L01.png

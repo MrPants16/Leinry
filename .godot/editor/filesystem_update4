@@ -1,0 +1,7 @@
+res://node_3d.tscn
+res://CameraControllerNode.cs
+res://CharacterBody3d.cs
+res://CollisionShape3d.cs
+res://Label.cs
+res://StaticBody3d.cs
+res://Tree.cs
