@@ -1,20 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740971440
+::res://::1740977359
 Camera3d.cs::CSharpScript::-1::1740971246::0::1::::<><>::
-CameraControllerNode.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+CameraControllerNode.cs::CSharpScript::-1::1740971246::0::1::::<>Node3D<>::
 camera_3d.gd::GDScript::-1::1740971246::0::1::::<>Camera3D<>::
-CharacterBody3d.cs::CSharpScript::-1::1740971246::0::1::::<><>::
-CollisionShape3d.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+CharacterBody3d.cs::CSharpScript::-1::1740971951::0::1::::<>CharacterBody3D<>::
+CollisionShape3d.cs::CSharpScript::-1::1740971246::0::1::::<>CollisionShape3D<>::
 icon.svg::CompressedTexture2D::8555685319356438333::1740971246::1740971441::1::::<><>::
-Label.cs::CSharpScript::-1::1740971246::0::1::::<><>::
-node_3d.tscn::PackedScene::593768961903834498::1740971246::0::1::::<><>::res://CharacterBody3d.cs<>res://Label.cs<>res://CameraControllerNode.cs<>res://camera_3d.gd<>uid://dj712skcpq1am::::res://Assets/sprites/Tree 02/Tree.obj<>res://Tree.cs
+Label.cs::CSharpScript::-1::1740971246::0::1::::<>Label<>::
+node_3d.tscn::PackedScene::593768961903834498::1740973106::0::1::::<><>::res://CharacterBody3d.cs<>res://Label.cs<>res://CameraControllerNode.cs<>res://camera_3d.gd<>uid://dj712skcpq1am::::res://Assets/sprites/Tree 02/Tree.obj<>res://Tree.cs
 README.md::TextFile::-1::1740971209::0::1::::<><>::
-StaticBody3d.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+StaticBody3d.cs::CSharpScript::-1::1740971246::0::1::::<>StaticBody3D<>::
 sun_light.gd::GDScript::-1::1740971246::0::1::::<>DirectionalLight3D<>::
-Tree.cs::CSharpScript::-1::1740971246::0::1::::<><>::
+Tree.cs::CSharpScript::-1::1740971246::0::1::::<>MeshInstance3D<>::
 ::res://Assets/::1740971246
 ::res://Assets/sprites/::1740971246
-::res://Assets/sprites/Tree 02/::1740971246
+::res://Assets/sprites/Tree 02/::1740971442
 bark_0004.jpg::CompressedTexture2D::4126384903690256686::1740971246::1740971441::1::::<><>::
 DB2X2_L01.png::CompressedTexture2D::752650455037081354::1740971246::1740971441::1::::<><>::
 DB2X2_L02.png::CompressedTexture2D::8197303518422428903::1740971246::1740971441::1::::<><>::
