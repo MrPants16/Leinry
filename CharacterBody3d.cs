@@ -41,12 +41,14 @@ public partial class CharacterBody3d : CharacterBody3D
 			//float current_stamina = new_stamina;
 		}
 		CameraControllerNode cameraController = GetTree().GetNodesInGroup("CameraController")[0] as CameraControllerNode;
-		LookAt(cameraController.GetNode<Node3D>("LookAt").GlobalPosition);
+		Vector3 lookAtPosition = cameraController.GetNode<Node3D>("LookAt").GlobalPosition;
+		lookAtPosition.Y = GlobalPosition.Y; // Keep the Y position the same to only rotate on Y and Z axes
+		LookAt(lookAtPosition);
 			
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
 		Vector2 inputDir = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
+		Vector3 direction = (Transform.Basis * new Vector3(-inputDir.X, 0, -inputDir.Y)).Normalized(); // Invert the input direction
 		if (direction != Vector3.Zero)
 		{
 			if (Input.IsActionPressed("ui_run"))
