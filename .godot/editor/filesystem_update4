@@ -1,0 +1,11 @@
+res://node_3d.tscn
+res://CameraControllerNode.cs
+res://Tree.cs
+res://CollisionShape3d.cs
+res://Label.cs
+res://CharacterBody3d.cs
+res://StaticBody3d.cs
+res://terrain.gd
+res://terrain_scultpor.gd
+res://node_3d.gdshader
+res://terrain_shader.gdshader

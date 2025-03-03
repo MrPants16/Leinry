@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740977359
+::res://::1740981412
 Camera3d.cs::CSharpScript::-1::1740971246::0::1::::<><>::
 CameraControllerNode.cs::CSharpScript::-1::1740971246::0::1::::<>Node3D<>::
 camera_3d.gd::GDScript::-1::1740971246::0::1::::<>Camera3D<>::
@@ -7,13 +7,17 @@ CharacterBody3d.cs::CSharpScript::-1::1740971951::0::1::::<>CharacterBody3D<>::
 CollisionShape3d.cs::CSharpScript::-1::1740971246::0::1::::<>CollisionShape3D<>::
 icon.svg::CompressedTexture2D::8555685319356438333::1740971246::1740971441::1::::<><>::
 Label.cs::CSharpScript::-1::1740971246::0::1::::<>Label<>::
-node_3d.tscn::PackedScene::593768961903834498::1740973106::0::1::::<><>::res://CharacterBody3d.cs<>res://Label.cs<>res://CameraControllerNode.cs<>res://camera_3d.gd<>uid://dj712skcpq1am::::res://Assets/sprites/Tree 02/Tree.obj<>res://Tree.cs
+node_3d.gdshader::Shader::-1::1740981412::0::1::::<><>::
+node_3d.tscn::PackedScene::593768961903834498::1740981412::0::1::::<><>::res://CharacterBody3d.cs<>res://Label.cs<>res://CameraControllerNode.cs<>res://camera_3d.gd<>uid://dj712skcpq1am::::res://Assets/sprites/Tree 02/Tree.obj<>res://Tree.cs<>res://terrain_shader.gdshader
 README.md::TextFile::-1::1740971209::0::1::::<><>::
+terrain_shader.gdshader::Shader::-1::1740981412::0::1::::<><>::
 StaticBody3d.cs::CSharpScript::-1::1740971246::0::1::::<>StaticBody3D<>::
 sun_light.gd::GDScript::-1::1740971246::0::1::::<>DirectionalLight3D<>::
 Tree.cs::CSharpScript::-1::1740971246::0::1::::<>MeshInstance3D<>::
 ::res://Assets/::1740971246
-::res://Assets/sprites/::1740971246
+::res://Assets/sprites/::1740981658
+::res://Assets/sprites/mountain/::1740981692
+mount.blend1.obj::Mesh::1620717368672702059::1400936170::1740981692::1::::<><>::
 ::res://Assets/sprites/Tree 02/::1740971442
 bark_0004.jpg::CompressedTexture2D::4126384903690256686::1740971246::1740971441::1::::<><>::
 DB2X2_L01.png::CompressedTexture2D::752650455037081354::1740971246::1740971441::1::::<><>::
@@ -21,3 +25,6 @@ DB2X2_L02.png::CompressedTexture2D::8197303518422428903::1740971246::1740971441:
 DB2X2_L02_NRM.png::CompressedTexture2D::3469969863014851305::1740971246::1740971442::1::::<><>::
 Render.jpeg::CompressedTexture2D::4266337875620359008::1740971246::1740971441::1::::<><>::
 Tree.obj::Mesh::7858649551178789284::1740971246::1740971442::1::::<><>::uid://by137rx65jjfy::::res://Assets/sprites/Tree 02/bark_0004.jpg<>uid://kyubp0jxb27g::::res://Assets/sprites/Tree 02/DB2X2_L01.png
+::res://Textures/::1740981692
+ground_grass_3264_4062_Small.jpg::CompressedTexture2D::1183697859390097151::1400936222::1740981940::1::::<><>::
+rock_text_01.png::CompressedTexture2D::7030029003465110273::1740979144::1740979893::1::::<><>::
